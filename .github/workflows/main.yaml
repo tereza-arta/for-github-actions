@@ -3,7 +3,7 @@ name: Name of my workflow
 on:
 	push:
 		branches:
-			- main
+  			- main
 
 jobs: 
 	my-job:
@@ -15,7 +15,3 @@ jobs:
 		steps:
 			- name: Checkout
 		  	  uses: actions/checkout@v4
-	
-			- name: Runcript
-		  	  run : bash file.sh
-
