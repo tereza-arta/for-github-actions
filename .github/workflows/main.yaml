@@ -1,1 +1,20 @@
-name:
+name: Name of my workflow
+
+on:
+	push:
+		branches:
+			- main
+
+jobs: 
+	my-job:
+	runs-on: ubuntu-latest
+	defaults:
+		run:
+			working-directory: ./hel
+
+	steps:
+		- name: Checkout
+			uses: actions/checkout@v4
+		- name: Run a script
+			run : bash file.sh
+
